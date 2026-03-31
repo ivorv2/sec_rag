@@ -1,0 +1,16 @@
+# Dev defaults — NOT for production. This file should be in .gitignore.
+# Production deployments must set REDIS_PASSWORD and SEC_RAG_API_KEY in .env.
+
+x-dev-defaults:
+  # Shared anchor so values are defined once
+  redis-pw: &redis-pw sec-rag-redis-dev-pw
+
+services:
+  app:
+    environment:
+      SEC_RAG_API_KEY: dev-key-not-for-production
+      SEC_RAG_REDIS_URL: redis://:sec-rag-redis-dev-pw@redis:6379/0
+  redis:
+    command: redis-server --requirepass sec-rag-redis-dev-pw
+    healthcheck:
+      test: ["CMD-SHELL", "REDISCLI_AUTH=sec-rag-redis-dev-pw redis-cli ping"]

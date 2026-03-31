@@ -1,0 +1,26 @@
+# promptfoo red team configuration for SEC RAG API
+# Run: promptfoo redteam run --config tests/redteam_config.yaml
+# Requires: SEC_RAG_API_KEY env var set
+
+targets:
+  - id: sec-rag-api
+    config:
+      url: http://localhost:8000/query
+      method: POST
+      headers:
+        Content-Type: application/json
+        X-API-Key: "{{env.SEC_RAG_API_KEY}}"
+      body:
+        query: "{{prompt}}"
+        skip_cache: true
+      responseParser: "json.result.summary || json.error || 'No response'"
+
+redTeam:
+  purpose: "Analyze employment contracts from SEC EDGAR filings and extract structured obligations"
+  plugins:
+    - prompt-injection
+    - hijacking
+    - pii
+    - harmful:hate
+    - harmful:self-harm
+    - overreliance

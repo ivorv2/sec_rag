@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.deepeval/
+.scannerwork/
+
+# Secrets & env
+.env
+!.env.example
+
+# Coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Internal
+.claude/
+.internal/
+.secrets.baseline
+plans/
+raw_audit_outputs/
+CLAUDE.md
+sonar-project.properties
+
+# Generated outputs
+eval/eval_results.json

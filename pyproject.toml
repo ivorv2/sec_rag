@@ -1,0 +1,88 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sec-rag"
+version = "0.1.0"
+description = "Agentic RAG for employment contract analysis using SEC EDGAR filings"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.7,<3",
+    "pydantic-settings>=2.3,<3",
+    "httpx>=0.27,<1",
+    "beautifulsoup4>=4.12,<5",
+    "lxml>=5.1,<6",
+    "sentence-transformers>=3.0,<4",
+    "fastembed>=0.4,<1",
+    "qdrant-client>=1.11,<2",
+    "langgraph>=1.0,<2",
+    "langchain>=0.3,<1",
+    "langchain-core>=0.3,<1",
+    "langchain-anthropic>=0.3,<1",
+    "langchain-openai>=0.3,<1",
+    "fastapi>=0.115,<1",
+    "uvicorn[standard]>=0.30,<1",
+    "langfuse>=2.50,<3",
+    "structlog>=24.0,<26",
+    "redis[hiredis]>=5.0,<6",
+    "prometheus-fastapi-instrumentator>=7.0,<8",
+]
+
+[project.optional-dependencies]
+frontend = [
+    "streamlit>=1.38,<2",
+]
+eval = [
+    "ragas>=0.4,<0.5",
+    "requests>=2.31,<3",
+]
+dev = [
+    "pytest>=8.0,<9",
+    "pytest-asyncio>=0.24,<1",
+    "ruff>=0.6,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sec_rag"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "langchain_anthropic.*",
+    "langchain_openai.*",
+    "langchain_core.*",
+    "langgraph.*",
+    "fastembed.*",
+    "sentence_transformers.*",
+    "qdrant_client.*",
+    "langfuse.*",
+    "streamlit.*",
+    "deepteam.*",
+    "prometheus_fastapi_instrumentator.*",
+]
+ignore_missing_imports = true
+
+[tool.mutmut]
+paths_to_mutate = "src/sec_rag/"
+tests_dir = "tests/"
+runner = "python -m pytest tests/ -q --tb=no -x"

@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What is the base salary specified in the employment agreement?",
+    "ground_truth": "The executive's annual base salary is set at a fixed dollar amount, subject to annual review by the board of directors or compensation committee, and shall not be reduced below the initial amount without consent.",
+    "context_keywords": ["base salary", "annual", "compensation", "pay"]
+  },
+  {
+    "question": "What are the bonus and incentive compensation provisions?",
+    "ground_truth": "The employee is eligible for an annual performance bonus based on achievement of individual and company performance targets, with the target bonus expressed as a percentage of base salary, as determined by the compensation committee.",
+    "context_keywords": ["bonus", "incentive", "performance", "target"]
+  },
+  {
+    "question": "How is the executive's compensation adjusted upon a change in role or responsibilities?",
+    "ground_truth": "If the executive's duties or responsibilities are materially diminished without consent, the executive may treat such diminution as constructive termination and become entitled to severance benefits under the agreement.",
+    "context_keywords": ["compensation", "duties", "responsibilities", "diminished", "constructive"]
+  },
+  {
+    "question": "Under what conditions can the employer terminate the employee for cause?",
+    "ground_truth": "The employer may terminate the employee for cause upon the occurrence of specified events including material breach of the agreement, conviction of a felony, willful misconduct, fraud, or failure to perform duties after written notice and a reasonable cure period.",
+    "context_keywords": ["termination", "cause", "breach", "misconduct", "felony"]
+  },
+  {
+    "question": "What are the employee's rights if terminated without cause?",
+    "ground_truth": "Upon termination without cause, the employee is entitled to receive accrued compensation, continued base salary payments for a specified period, pro-rated bonus, and continuation of health benefits, subject to execution of a release agreement.",
+    "context_keywords": ["without cause", "termination", "severance", "release", "benefits"]
+  },
+  {
+    "question": "What notice period is required for voluntary resignation?",
+    "ground_truth": "The employee must provide written notice of resignation, typically 30 to 90 days in advance, during which period the employer may elect to place the employee on garden leave or accept immediate departure.",
+    "context_keywords": ["resignation", "notice", "voluntary", "written notice", "garden leave"]
+  },
+  {
+    "question": "What are the non-compete obligations in the employment agreement?",
+    "ground_truth": "The employee is prohibited from engaging in competing business activities, directly or indirectly, for a specified period following termination, typically 12 to 24 months, within a defined geographic area or market segment.",
+    "context_keywords": ["non-compete", "competition", "restrictive covenant", "prohibited"]
+  },
+  {
+    "question": "What non-solicitation restrictions apply after termination?",
+    "ground_truth": "Following termination, the employee shall not solicit, recruit, or hire any employees, consultants, or customers of the company for a period of 12 to 24 months, nor interfere with any business relationship of the company.",
+    "context_keywords": ["non-solicitation", "solicit", "recruit", "customers", "employees"]
+  },
+  {
+    "question": "What equity or stock option grants are included in the agreement?",
+    "ground_truth": "The employee is granted stock options or restricted stock units subject to a vesting schedule, typically over four years with a one-year cliff, governed by the company's equity incentive plan and a separate award agreement.",
+    "context_keywords": ["equity", "stock options", "restricted stock", "vesting", "RSU"]
+  },
+  {
+    "question": "What happens to unvested equity upon termination or change of control?",
+    "ground_truth": "Upon termination without cause or a change of control, a portion or all of the unvested equity awards may accelerate, with the specific treatment depending on whether the termination occurs in connection with a change of control transaction.",
+    "context_keywords": ["unvested", "acceleration", "change of control", "equity", "vesting"]
+  },
+  {
+    "question": "What health and insurance benefits does the agreement provide?",
+    "ground_truth": "The employee is entitled to participate in all benefit plans generally available to senior executives, including health, dental, vision, life insurance, and disability coverage, with premiums paid in whole or in part by the employer.",
+    "context_keywords": ["health", "insurance", "benefits", "dental", "disability", "coverage"]
+  },
+  {
+    "question": "How much paid vacation and time off is the employee entitled to?",
+    "ground_truth": "The employee is entitled to a specified number of paid vacation days per year, typically four to six weeks for senior executives, in accordance with the company's vacation policy, with unused days subject to the company's carry-over rules.",
+    "context_keywords": ["vacation", "paid time off", "PTO", "days", "leave"]
+  },
+  {
+    "question": "What severance payments are provided upon termination without cause?",
+    "ground_truth": "Upon termination without cause, the employee is entitled to severance equal to a specified multiple of base salary and target bonus, payable in a lump sum or in installments, plus COBRA continuation coverage for a defined period, contingent on executing a general release.",
+    "context_keywords": ["severance", "termination", "lump sum", "COBRA", "release"]
+  },
+  {
+    "question": "Are there any severance provisions triggered by a change of control?",
+    "ground_truth": "If the employee is terminated without cause or resigns for good reason within a specified period following a change of control, the employee receives enhanced severance benefits including accelerated equity vesting, an increased cash severance multiple, and extended benefit continuation.",
+    "context_keywords": ["change of control", "severance", "good reason", "accelerated", "double trigger"]
+  },
+  {
+    "question": "What confidentiality obligations does the employee have?",
+    "ground_truth": "The employee agrees to maintain the confidentiality of all proprietary and trade secret information during and after employment, and shall not disclose, use, or publish any confidential information except as required in performing job duties or as required by law.",
+    "context_keywords": ["confidentiality", "proprietary", "trade secret", "non-disclosure"]
+  },
+  {
+    "question": "Who owns intellectual property created during employment?",
+    "ground_truth": "All inventions, works of authorship, and intellectual property created by the employee during the term of employment and related to the company's business are assigned to and owned by the company, and the employee agrees to execute any documents necessary to perfect such ownership.",
+    "context_keywords": ["intellectual property", "inventions", "assignment", "ownership", "work product"]
+  },
+  {
+    "question": "What is the term and renewal structure of the employment agreement?",
+    "ground_truth": "The agreement has an initial term, typically one to three years, and automatically renews for successive one-year periods unless either party provides written notice of non-renewal within a specified period prior to the expiration date.",
+    "context_keywords": ["term", "renewal", "initial term", "automatic renewal", "expiration"]
+  },
+  {
+    "question": "What governing law and dispute resolution mechanisms are specified?",
+    "ground_truth": "The agreement is governed by the laws of the specified state, and any disputes arising under the agreement shall be resolved through binding arbitration or in the courts of the designated jurisdiction, with the prevailing party entitled to recover reasonable attorneys' fees.",
+    "context_keywords": ["governing law", "arbitration", "jurisdiction", "dispute resolution"]
+  },
+  {
+    "question": "What are the indemnification provisions for the executive?",
+    "ground_truth": "The company agrees to indemnify and hold harmless the executive against all claims, liabilities, and expenses arising from the executive's service, to the fullest extent permitted by law and the company's bylaws, and to maintain directors' and officers' liability insurance coverage.",
+    "context_keywords": ["indemnification", "hold harmless", "D&O insurance", "liability"]
+  },
+  {
+    "question": "Does the agreement contain any clawback or recoupment provisions?",
+    "ground_truth": "Incentive compensation, including bonuses and equity awards, is subject to any clawback or recoupment policy adopted by the company or required by applicable law, including recovery of compensation in the event of a financial restatement or misconduct.",
+    "context_keywords": ["clawback", "recoupment", "restatement", "recovery", "compensation"]
+  }
+]
